@@ -1,6 +1,6 @@
-# real-world-vue
+# Balloon Krewe Website
 
-This template should help get you started developing with Vue 3 in Vite.
+Commerce web app built with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 

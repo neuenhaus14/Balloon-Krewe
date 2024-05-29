@@ -29,8 +29,4 @@ onMounted(() => {
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
   </div>
-<<<<<<< HEAD
 </template>
-=======
-</template>
->>>>>>> L3-end

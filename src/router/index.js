@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventListView from '../views/EventListView.vue'
 import EventDetailsView from "../views/EventDetailsView.vue"
+import ContactView from '../views/ContactView.vue'
 import AboutView from '../views/AboutView.vue'
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       name: 'event-details',
       props: true,
       component: EventDetailsView
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactView
     },
     // {
     //   // add not found component to the "path: *"

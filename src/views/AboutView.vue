@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
   <div class="about">
-    <p>A site for events to better the world.</p>
+    <p>Custom balloon arrangements by Morgan Grosz and Natalie Jones.</p>
     <p>This is the response from the server: {{ cat }}</p>
   </div>
 </template>

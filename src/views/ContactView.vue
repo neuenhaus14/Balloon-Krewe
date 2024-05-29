@@ -9,7 +9,7 @@ const cat = ref(null)
 
 <template>
   <div class="contact-view">
-    <p>Reach out for an inquiry below!</p>
+    <p>Send an inquiry below!</p>
     <ContactForm />
   </div>
 </template>

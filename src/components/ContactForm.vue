@@ -1,16 +1,32 @@
 <script setup>
+import { ref, watchEffect } from 'vue';
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css';
+
+const firstName = ref();
+const lastName = ref();
+const email = ref();
+const message = ref();
+const date = ref();
+
+// watchEffect(() => 
+//   console.log(firstName.value, lastName.value, email.value )
+// )
 
 </script>
 
 <template>
   <div class="contact-form">
     <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName">
+    <input type="text" id="firstName" v-model="firstName"><br/>
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName">
+    <input type="text" id="lastName" v-model="lastName"><br/>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email" v-model="email"><br/>
     <label for="message">Message:</label>
-    <input type="text" id="message" name="message">
+    <input type="text" id="message" v-model="message"><br/>
+    <label for="date">Select a date and time:</label>
+    <Datepicker id="date" v-model="date"/>
   </div>
 </template>
+

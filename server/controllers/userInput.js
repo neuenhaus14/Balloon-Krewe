@@ -6,8 +6,10 @@ const userInputs = express.Router
 
 
 userInputs.get('/get-input', (req, res) => {
-  userInput.findAll = (req, res) => {
+  // req params here
   
+  userInput.findAll = (req, res) => {
+    // logic for finding all
   } 
 
 })

@@ -31,5 +31,23 @@ export default {
 
   getCat(){
     return apiBackend.get('/cat')
+  },
+
+  postContactForm(){
+    console.log('hit post req on client in event service')
+    // return apiBackend.post('/userInput/post-input', {body:{ firstName,
+    //   lastName,
+    //   email,
+    //   message,
+    //   date,}})
+    //return apiBackend.post('/userInput/post-input')
+    //return apiBackend.post('/post-input')
+    return apiBackend.post('/user-input/post-input', {
+      data: {firstName,
+      lastName,
+      email, 
+      message,
+      date,}
+    })
   }
 }

@@ -1,15 +1,21 @@
-const db = require('../models/index')
-const userInput = db.userInput
-//const userInput = require("./userInput.js")
-const userInputs = express.Router
+const express = require('express');
+const UserInput = require("../models/userInput")
+const Inputs = express.Router()
 
 
+Inputs.post('/post-input', async (req, res) => {
+  console.log('hit post-input')
+  console.log(req.body)
 
-userInputs.get('/get-input', (req, res) => {
-  // req params here
-  
-  userInput.findAll = (req, res) => {
-    // logic for finding all
+  try{
+      const result = await UserInput.findAll({where: {id : 1}})
+      console.log(result)
   } 
+  catch (err ) {
+    console.error("error", err)
+  }
 
 })
+
+
+module.exports = Inputs;

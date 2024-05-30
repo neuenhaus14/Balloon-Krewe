@@ -1,29 +1,31 @@
 const express = require("express");
 const cors = require("cors");
+const sequelize = require("./models/index")
 
-const app = express()
-const router = express.Router()
-const db = require("./models")
+// import router from controller into here to use
+const Inputs = require('./controllers/userInput.js') 
 
-const userInputs = require('./models/userInput') 
-
-//this is what the client is running on
 var corsOptions = {
+  //this is what the client is running on
   origin: "http://127.0.0.1:5173"
 };
 
-app.use(express.json());
-app.use(cors(corsOptions));
-app.use('/api/userInput', userInputs)
 
+const app = express()
 const PORT = 3555;
 
+
+app.use(express.json());
+app.use(cors(corsOptions));
+app.use('/api/user-input', Inputs)
+
+
 app.get('/api/cat', (req, res) => {
-  console.log('hit this')
-  res.send("Baby Girl");
+  res.send("Baby Cat");
 });
 
-db.sequelize.sync();
+//updates models into the database
+sequelize.sync();
 
 app.listen(PORT, () => {
    console.log(`Server is running on PORT: ${PORT}`);

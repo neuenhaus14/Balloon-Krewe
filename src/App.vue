@@ -19,8 +19,10 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
 #layout {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Wix Madefor Display, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

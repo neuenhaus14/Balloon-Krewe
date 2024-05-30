@@ -10,9 +10,9 @@ const email = ref();
 const message = ref();
 const date = ref();
 
-watchEffect(() => 
-  console.log(firstName.value, lastName.value, email.value, message.value, date.value )
-)
+// watchEffect(() => 
+//   console.log(firstName.value, lastName.value, email.value, message.value, date.value )
+// )
 
 const onSubmit = (() => {
   console.log('hit onSubmit function')

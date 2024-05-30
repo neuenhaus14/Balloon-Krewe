@@ -1,6 +1,8 @@
 <script setup>
 import EventCard from '@/components/EventCard.vue'
 import EventService from '../EventService';
+import ContactForm from '../components/ContactForm.vue'
+import AboutView from './AboutView.vue'
 
 import { ref, onMounted } from 'vue'
 
@@ -21,6 +23,8 @@ onMounted(() => {
   <h1>Events For Good</h1>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <AboutView />
+    <ContactForm />
   </div>
 </template>
 

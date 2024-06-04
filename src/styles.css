@@ -1,0 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?&family=Wix+Madefor+Display:wght@400..800&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* #layout {
+  font-family: Wix Madefor Display, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+} */

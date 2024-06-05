@@ -38,20 +38,35 @@ const props = defineProps({
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
   </div> -->
-  <div id="event-detials">
-    <img :src="src" alt="Balloon Arches" width="200" height="300"/>
-    <!-- <h1> {{v-bind= "title"}}</h1>
-    <p>{{ description }}</p> -->
+  <div id="event-details">
+  <div id="event-img">
+    <img :src="src" alt="Balloon Arches" width="500" height="600"/>
   </div>
+  <div id="event-img-details">
+    <h2> {{props.title}} </h2>
+    {{ props.description }}
+  </div>
+</div>
 </template>
 
 <style scoped>
-  #event-details{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+#event-details{
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-evenly;
+}
 
+  #event-img{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #event-img-details{
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
   }
 
 </style>
